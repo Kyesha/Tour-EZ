@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 class Form extends React.Component {
   render() {
@@ -8,12 +8,11 @@ class Form extends React.Component {
 
         </input>
         <button>
-        Search For Restaurants
+        Search For Restaurants hello
         </button>
       </form>
     );
   }
 }
-
 
 export default Form;

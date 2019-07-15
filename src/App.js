@@ -4,6 +4,7 @@ import Form from "./Components/Form";
 import Restaurants from "./Components/Restaurants";
 import axios from "axios";
 
+
 const API_KEY = "f2eb8f96660c3ab047ca7842df116edf"
 class App extends React.Component{
   getRestaurants = (event) => {
@@ -40,6 +41,8 @@ class App extends React.Component{
     );
   }
 }
+
+
 
 
 
