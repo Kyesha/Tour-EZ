@@ -1,7 +1,8 @@
 import React from "react";
 import Title from "./Components/Title";
 import Form from "./Components/Form";
-import Weather from "./Components/Weather";
+import Restaurants from "./Components/Restaurants";
+import axios from 'axios'
 
 const API_KEY = "f2eb8f96660c3ab047ca7842df116edf"
 class App extends React.Component{
@@ -12,17 +13,14 @@ class App extends React.Component{
   }
   render() {
     return (
-    <div>
-      <Title />
-      <Form />
-      <Weather />
-
-
-
-    </div>
-    );
+      <div>
+        <p>Hello</p>
+      </div>
+    )
   }
 }
+
+
 
 
 
