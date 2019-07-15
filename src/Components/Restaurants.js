@@ -1,6 +1,6 @@
 import React from "react";
 
-class Weather extends React. Component {
+class Restaurants extends React.Component {
   render() {
     return(
       <div>Lets get something to Grub on!</div>
@@ -9,4 +9,4 @@ class Weather extends React. Component {
 }
 
 
-export default Weather;
+export default Restaurants;
