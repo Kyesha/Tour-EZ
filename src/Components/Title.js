@@ -7,8 +7,8 @@ class Title extends React.Component {
       <div>
       <nav className="navbar navbar-light bg-light">
         <h1>Tour e-z</h1>
-        <a class="navbar-brand" href="#">
-    
+        <a className="navbar-brand" href="#">
+
         <img src="https://img.icons8.com/dusk/64/000000/airplane-take-off.png"/>
          </a>
       </nav>
