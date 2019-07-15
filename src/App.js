@@ -14,7 +14,7 @@ class App extends React.Component{
       const url = 'https:developers.zomato.com/api/v2.1/search?entity_ids=59&entity_type=city&apikey=f2eb8f96660c3ab047ca7842df116edf'
       axios.get(url)
       .then(res => {
-        console.log
+        // console.log
 
       })
     }
