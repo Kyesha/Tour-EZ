@@ -1,10 +1,16 @@
 import React from 'react';
 
-
 class Form extends React.Component {
   render() {
     return(
-      <div>Hello i am a form</div>
+      <form onSubmit={this.props.getRestaurants}>
+        <input type="text" name="RestaurantsName">
+
+        </input>
+        <button>
+        Search For Restaurants hello
+        </button>
+      </form>
     );
   }
 }
