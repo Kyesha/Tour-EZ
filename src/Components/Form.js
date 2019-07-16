@@ -8,7 +8,7 @@ class Form extends React.Component {
 
         </input>
         <button>
-        Search For Restaurants hello
+        Search For Restaurants 
         </button>
       </form>
     );
