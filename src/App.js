@@ -1,9 +1,9 @@
-import React from "react";
-import Title from "./Components/Title";
-import Form from "./Components/Form";
-import Restaurants from "./Components/Restaurants";
-import axios from "axios";
-
+import React from 'react';
+import Title from './Components/Title';
+import Form from './Components/Form';
+import Restaurants from './Components/Restaurants';
+import axios from 'axios';
+import Restaurant from './Components/Restaurant '
 
 const API_KEY = "f2eb8f96660c3ab047ca7842df116edf"
 class App extends React.Component{
@@ -18,13 +18,25 @@ class App extends React.Component{
 
       })
     }
+      State = {
+        restaurantsName = []
+      }
+        getRestuarants = (e) async => {
+          e.preventDefault();
+          const user = e.target.elements.restaurants.value;
+          if (!user) return;
+          let { restuarantsName } = await axios.get(`https://developers.zomato.com/api/v2.1/search?entity_id=59&entity_type=city&apikey=f2eb8f96660c3ab047ca7842df116edf`)
+          this.setState({ RestaurantsName : data });
+        }
+      
 
-
-
-
-  // getWeather = async (event) => {
-  //   event.preventDefault();
-  //   const api_call = await fetch(`https://developers.zomato.com/api/v2.1/search?entity_id=59&entity_type=city&apikey=${API_KEY}`);
+      //   getRestaurant = async (e) => {
+      //     e.preventDefault();
+      //     const user = e.target.elements.restuarant.value;
+      //     if (!user) return;
+      //     let { data } = await axios.get(`/api/${user}`)
+      //     this.setState({ restuarantData: data });
+      //   }
   //   const data = await api_call.json();
   //   console.log(data);
   // }
@@ -32,8 +44,11 @@ class App extends React.Component{
     return (
     <div>
       <Title />
-      <Form getRestaurants={this.getRestaurants}/>
+      <Form getRestaurants={this.getRestaurants} />
       <Restaurants />
+      <Restaurant getRestaurant={this.getRestaurant}/>
+
+    
 
 
 
