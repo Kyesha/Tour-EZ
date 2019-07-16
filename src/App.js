@@ -7,33 +7,30 @@ import axios from "axios";
 
 const API_KEY = "f2eb8f96660c3ab047ca7842df116edf"
 class App extends React.Component{
+  constructor(props) {
+    super(props);
+    this.state = { restaurants: []}
+  }
+
   getRestaurants = (event) => {
-      const RestaurantsName = event.target.elements.RestaurantsName.value;
+      const restaurantsName = event.target.elements.RestaurantsName.value;
       event.preventDefault();
-      console.log(RestaurantsName);
-      const url = 'https:developers.zomato.com/api/v2.1/search?entity_ids=59&entity_type=city&apikey=f2eb8f96660c3ab047ca7842df116edf'
+      console.log(restaurantsName);
+      const url = `https://developers.zomato.com/api/v2.1/search?entity_id=280&entity_type=city&apikey=${API_KEY}`
       axios.get(url)
       .then(res => {
-        // console.log
-
+        // console.log(res.data.restaurants);
+        this.setState({restaurants: res.data.restaurants});
+        console.log(this.state.restaurants)
       })
     }
 
-
-
-
-  // getWeather = async (event) => {
-  //   event.preventDefault();
-  //   const api_call = await fetch(`https://developers.zomato.com/api/v2.1/search?entity_id=59&entity_type=city&apikey=${API_KEY}`);
-  //   const data = await api_call.json();
-  //   console.log(data);
-  // }
   render() {
     return (
     <div>
       <Title />
       <Form getRestaurants={this.getRestaurants}/>
-      <Restaurants />
+      <Restaurants restaurants={this.state.restaurants}/>
 
 
 
